@@ -7,18 +7,23 @@ Features:
 
 # Usage
 
-### 本地包测试
-
-当前目录下执行：
+### 安装
 
 ```bash
-pnpm link --global --dir=./
+pnpm add @oiij/three-js
 ```
 
-目标目录：
+### 使用
 
-```bash
-pnpm link --global <package name>
+```vue
+<script setup lang="ts">
+import { useThreeJs } from '@oiij/three-js'
+const { domRef } = useThreeJs()
+</script>
+
+<template>
+  <div ref="domRef" style="width: 100%; height: 100%;" />
+</template>
 ```
 
 ## License
